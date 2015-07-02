@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="main row">
+      <div class="alert alert-danger col-sm-8 col-sm-offset-2">
+        <p>I'm sorry, we couldn't find your location. Please select your state
+        to see recalls <select><option>--select
+          state--</option><option>Alabama</option></select></p>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
