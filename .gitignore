@@ -26,4 +26,13 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-bower_components
+public
+.tmp
+.sass-cache
+.idea
+client/bower_components
+dist
+/server/config/local.env.js
+.bash_history
+.config
+.npm
