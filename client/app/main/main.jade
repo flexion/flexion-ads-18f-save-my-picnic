@@ -40,3 +40,39 @@ div
         td {{recall.recalling_firm }}
         td {{ recall.status }}
 
+  p {{ reports }}div(ng-include="header.html")
+main.main.row(role="main")
+  .alert.alert-danger
+    p Sorry, we couldn't find your location. Please select your state.
+
+  .col-sm-8.col-sm-offset-2
+    h1 {{state}} Food Recall Results
+      small.update Database last updated &ndash; {{date}}
+    article.product__card
+      h2.product__title {{product-descriotion}}
+        div.btn.btn-primary
+          span.glyphicon.glyphicon-plus
+          | View Recall Details
+      .product__details.visuallyHidden
+        ul
+          li.recall__details
+            span.icon
+            em Recall Reason:
+            | {{reason-for-recall}}
+          li.recall__states
+            span.icon
+            em Affected States:
+            | {{distribution-pattern}}
+          li.recall__report-date
+            span.icon
+            em Report Date:
+            | {{report-date}}
+          li.recall__classification
+            span.icon
+            em Classification:
+            | {{classification}}
+          li.recall__code-info
+            span.icon
+            em Product Code:
+            | {{code-info}}
+div(ng-include="footer.html")
