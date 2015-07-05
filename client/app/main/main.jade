@@ -41,10 +41,13 @@ div
         td {{ recall.status }}
 
   p {{ reports }}div(ng-include="header.html")
+div(ng-include='"components/header/header.html"')
 main.main.row(role="main")
-  .alert.alert-danger
-    p Sorry, we couldn't find your location. Please select your state.
-
+  .panel.col-sm-8.col-sm-offset-2
+    form
+      label.visuallyHidden(for="search") Search Recalled Foods
+      input#search.search.form-control(type="text")
+      button.btn.btn-primary(type="submit") Find Local Recalls
   .col-sm-8.col-sm-offset-2
     h1 {{state}} Food Recall Results
       small.update Database last updated &ndash; {{date}}
@@ -75,4 +78,4 @@ main.main.row(role="main")
             span.icon
             em Product Code:
             | {{code-info}}
-div(ng-include="footer.html")
+div(ng-include='"components/footer/footer.html"')

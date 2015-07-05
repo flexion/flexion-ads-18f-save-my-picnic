@@ -1,4 +1,5 @@
-@import "variables";
-@import "alert";
-@import "card";
-
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+@import "variables.scss";
+@import "alert.scss";
+@import "card.scss";
+@import "layout.scss";
