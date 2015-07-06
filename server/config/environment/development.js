@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/gsffda-dev'
+    uri: 'mongodb://localhost/picnicApp-dev'
   },
 
   seedDB: true
