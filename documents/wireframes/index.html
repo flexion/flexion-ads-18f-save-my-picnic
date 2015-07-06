@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+    {% for post in site.posts %}
+      <article>
+        <h2 class="product__title">{{ post.product-description }} <span class="glyphicon
+        glyphicon-plus" aria="hidden"><span></h2>
+        <div class="product__details">
+          <ul>
+            <li class="recall__details"><em>Recall Reason:</em> 
+              {{ post.reason-for-recall }}</li>
+            <li class="recall__states"><em>Affected States:</em> 
+              {{ post.distribution-pattern }}</li>
+            <li class="recall__report-date"><em>Report Date:</em> 
+              {{ post.report-date }}</li>
+            <li class="recall__classification"><em>Classification:</em>
+              {{ post.classification }}</li>
+            <li class="recall__code-info"><em>Product Code:</em>
+              {{ post.code-info }}</li>
+          </ul>
+        </div>
+      </article>
+    {% endfor %}

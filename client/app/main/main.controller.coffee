@@ -63,6 +63,7 @@ angular.module('picnicApp')
           usSpinnerService.stop 'spinner-1'
           $scope.reports = reports.results
 
+          console.log($scope.reports)
 #          groupedByDateData = _.groupBy adverseReactions.results, (result) ->
 #            result.time.substring(0,6)
 #

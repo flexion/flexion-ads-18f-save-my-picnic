@@ -1,0 +1,41 @@
+body {
+  background-color: $secondary;
+  font-family: "Lato", "Helvetica", sans-serif; 
+}
+.main {
+  padding-top: 30px;
+}
+.right  {
+  float: right;
+}
+.product__details {
+  box-sizing: border-box;
+   margin: 0 0 10px 0;
+  padding: 0 10px;
+  transition: all ease-in-out .2s;
+  overflow: hidden;
+  &.open {
+    height: auto;
+    padding: 10px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  em {
+    font-style: normal;
+    font-weight: bold;
+  }
+}
+
+.product__title {
+  font-size: 1.3em;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 0;
+  .glyphicon {
+    float: right;
+    display: inline-block;
+  }
+}
+

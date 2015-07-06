@@ -1,0 +1,11 @@
+#search {
+  max-width: 84%;
+}
+.btn-primary {
+  background-color: $primary;
+  border: 1px solid $primaryShade;
+  &:focus, &:hover {
+    background-color: $accentOneShade;
+    border: 1px solid $accentOneShade;
+  }
+}
