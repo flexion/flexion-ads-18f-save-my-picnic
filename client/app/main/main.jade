@@ -6,9 +6,37 @@ div.container.search__group
       input#search.search__field(type='text', ng-model='food')
     span.input-group-btn
       button.search__button.btn.btn-default(type='submit',
-      ng-click='search(food)')
+      ng-click='startSpin();search(food)')
         span.sr-only Search Database
         span.glyphicon.glyphicon-search(aria-hidden='true')
 
 div
-  p {{ reports }}
+  span(us-spinner='', spinner-key='spinner-1')
+
+
+div
+  table.table.no-margin.table-striped.table-hover.table-bordered
+    thead
+      tr
+        th
+          | Recall Date
+        th
+          | Product&nbsp;&nbsp;
+
+        th
+          | Locale&nbsp;&nbsp;
+
+        th
+          | Recalling Firm&nbsp;&nbsp;
+        th
+          | Status&nbsp;&nbsp;
+
+
+    tbody
+      tr(ng-repeat='recall in reports | orderBy: "report_date": true')
+        td {{ recall.report_date | recallDate }}
+        td {{ recall.product_description | limitTo: 50 }}
+        td {{recall.city}}, {{ recall.state }} {{ recall.country }}
+        td {{recall.recalling_firm }}
+        td {{ recall.status }}
+
