@@ -4,7 +4,7 @@
 module.exports = function (grunt) {
   var localConfig;
   try {
-    localConfig = require('./server2/config/local.env');
+    localConfig = require('./server/config/local.env');
   } catch(e) {
     localConfig = {};
   }
@@ -334,7 +334,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'gsfFdaApp',
+        module: 'picnicApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
@@ -735,4 +735,3 @@ module.exports = function (grunt) {
     'build'
   ]);
 };
-

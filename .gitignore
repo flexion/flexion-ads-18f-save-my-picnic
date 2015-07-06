@@ -36,3 +36,5 @@ dist
 .bash_history
 .config
 .npm
+
+bower_components/
