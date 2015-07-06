@@ -1,0 +1,11 @@
+.product__card {
+  border: 1px solid $secondaryShade; 
+  background-color: $secondaryPastel;
+  margin-bottom: 10px;
+  .btn-primary {
+    float: right;
+  }
+}
+.product__title {
+  overflow: hidden;
+}
