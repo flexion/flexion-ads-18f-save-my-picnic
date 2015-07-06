@@ -6,9 +6,13 @@ div.container.search__group
       input#search.search__field(type='text', ng-model='food')
     span.input-group-btn
       button.search__button.btn.btn-default(type='submit',
-      ng-click='search(food)')
+      ng-click='startSpin();search(food)')
         span.sr-only Search Database
         span.glyphicon.glyphicon-search(aria-hidden='true')
+
+div
+  span(us-spinner='', spinner-key='spinner-1')
+
 
 div
   table.table.no-margin.table-striped.table-hover.table-bordered
