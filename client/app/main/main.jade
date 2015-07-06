@@ -15,6 +15,8 @@ div
     thead
       tr
         th
+          | Recall Date
+        th
           | Product&nbsp;&nbsp;
 
         th
@@ -28,6 +30,7 @@ div
 
     tbody
       tr(ng-repeat='recall in reports | orderBy: "report_date": true')
+        td {{ recall.report_date | recallDate }}
         td {{ recall.product_description | limitTo: 50 }}
         td {{recall.city}}, {{ recall.state }} {{ recall.country }}
         td {{recall.recalling_firm }}

@@ -1,8 +1,13 @@
 'use strict'
 
-angular.module('picnicApp').controller 'MainCtrl', ($scope, $http, usSpinnerService) ->
+angular.module('picnicApp')
+.filter 'recallDate', ($filter) ->
+  (input) ->
+    return unless input?
+    date = new Date input.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')
+    $filter('date')(date, 'MM/dd/yyyy')
+.controller 'MainCtrl', ($scope, $http, usSpinnerService) ->
   $scope.reports = []
-
 #  $scope.xAxisTickFormatFunction = ->
 #    (d) ->
 #      dateString = d.replace(/(\d{4})(\d{2})/g, '$2/01/$1')
@@ -32,6 +37,7 @@ angular.module('picnicApp').controller 'MainCtrl', ($scope, $http, usSpinnerServ
 #    (d, i) ->
 #      colorCategory(i)
 
+
   $scope.search = (food) ->
     $scope.reports = []
     $scope.errorMessage = ''
@@ -55,7 +61,6 @@ angular.module('picnicApp').controller 'MainCtrl', ($scope, $http, usSpinnerServ
       $http.get("/api/food-search/?search=#{window.btoa queryString}")
         .success (reports) ->
           usSpinnerService.stop 'spinner-1'
-          console.log reports.results
           $scope.reports = reports.results
 
 #          groupedByDateData = _.groupBy adverseReactions.results, (result) ->
@@ -127,3 +132,4 @@ angular.module('picnicApp').controller 'MainCtrl', ($scope, $http, usSpinnerServ
 #
 #  $scope.pharmaOptions =
 #    highlight: true
+
