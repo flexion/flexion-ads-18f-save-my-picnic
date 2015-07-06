@@ -1,0 +1,58 @@
+.disclaimer {
+  background-color: $accentFour;
+  color: $secondaryPastel;
+  padding: 1em 0 0;
+  font-size: 13px;
+}
+
+.navigation {
+  background-color: $primary;
+  color: $secondary;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  a:link, a:active {
+    color: $secondaryPastel;
+    padding: .5em .5em 0;
+    height: 100%;
+    display: block;
+  }
+  a:hover, a:focus, a:visited {
+    color: $secondary;
+    text-decoration: underline;
+  }
+}
+
+.alert-icon {
+  background: url('/assets/images/disclaimer_icon.png') no-repeat;
+  width: 16px;
+  height: 32px;
+  background-size: 100%;
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+.logo {
+  background: url('/assets/images/picnic_rescue_logo.png') no-repeat;
+  display: block;
+  height: 100px;
+  width: 480px;
+  overflow: hidden;
+  text-indent: -999px;
+  background-size: 100%;
+  margin-top: 20px;
+}
+.site__subtitle {
+  color: $secondaryPastel;
+  position: absolute;
+  font-size: 16px;
+  top: 80px;
+  lefT: 175px;
+}
+.banner {
+  background: url('/assets/images/picnic_blanket_background_tileable.png');
+}

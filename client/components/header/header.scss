@@ -1,0 +1,23 @@
+.disclaimer {
+  background-color: $accentFour;
+  color: $secondaryPastel;
+}
+
+.navigation {
+  background-color: $primary;
+  color: $secondary;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a:link, a:active {
+    color: $secondaryPastel;
+  }
+  a:hover, a:focus, a:visited {
+    color: $secondary;
+    text-decoration: underline;
+  }
+}
+
