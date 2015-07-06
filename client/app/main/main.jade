@@ -6,12 +6,12 @@ main.main.row(role="main")
       input#search.search.form-control(type="text", ng-model='food')
       .input-group-btn
         button.btn.btn-primary(type="submit", ng-click='search(food)') Find Local Recalls
-  .col-sm-8.col-sm-offset-2
+  div(ng-show='reports.length > 0').col-sm-8.col-sm-offset-2
     h1 Food Recall Results
-      small.update Database last updated &ndash; {{date}}
-    div(ng-repeat='recall in reports | orderBy: "report_date": true')      
+      small.update &nbsp;Database last updated &ndash; {{meta.last_updated}}
+    div(ng-repeat='recall in reports | orderBy: "report_date": true')
       article.product__card
-        h2.product__title {{recall.product_description | limitTo:50 }}
+        h2.product__title {{recall.product_description }}
           div.btn.btn-primary
             span.glyphicon.glyphicon-plus
             | View Recall Details
@@ -19,22 +19,22 @@ main.main.row(role="main")
           ul
             li.recall__details
               span.icon
-              em Recall Reason:
+              em Recall Reason:&nbsp;
               | {{recall.reason_for_recall}}
             li.recall__states
               span.icon
-              em Affected States:
+              em Affected States:&nbsp;
               | {{recall.distribution_pattern}}
             li.recall__report-date
               span.icon
-              em Report Date:
-              | {{recall.report_date}}
+              em Report Date:&nbsp;
+              | {{recall.report_date | recallDate}}
             li.recall__classification
               span.icon
-              em Classification:
+              em Classification:&nbsp;
               | {{recall.classification}}
             li.recall__code-info
               span.icon
-              em Product Code:
+              em Product Code:&nbsp;
               | {{recall.code_info}}
 div(ng-include='"components/footer/footer.html"')
