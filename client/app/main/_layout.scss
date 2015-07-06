@@ -5,15 +5,21 @@ body {
 .main {
   padding-top: 30px;
 }
+.content {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+} 
 .right  {
   float: right;
 }
 .product__details {
   box-sizing: border-box;
-   margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
   padding: 0 10px;
   transition: all ease-in-out .2s;
   overflow: hidden;
+  clear: both;
   &.open {
     height: auto;
     padding: 10px;
@@ -31,8 +37,7 @@ body {
 .product__title {
   font-size: 1.3em;
   padding: 10px;
-  width: 100%;
-  margin-bottom: 0;
+  margin: 9px 0 0 0;
   .glyphicon {
     float: right;
     display: inline-block;

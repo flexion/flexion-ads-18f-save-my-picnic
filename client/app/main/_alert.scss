@@ -1,5 +1,4 @@
 #search {
-  max-width: 84%;
 }
 .btn-primary {
   background-color: $primary;
@@ -8,4 +7,7 @@
     background-color: $accentOneShade;
     border: 1px solid $accentOneShade;
   }
+}
+.update {
+  font-size: .5em;
 }

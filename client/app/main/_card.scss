@@ -4,8 +4,58 @@
   margin-bottom: 10px;
   .btn-primary {
     float: right;
+    margin: 10px;
+  }
+  .details {
+    display: inline-block; 
+    float: left;
+    max-width: 94%;
   }
 }
 .product__title {
   overflow: hidden;
+}
+.recall__details {
+  .icon {
+    background: url('/assets/images/recall_reason_icon.png') no-repeat;
+  }
+}
+.recall__states{
+  .icon {
+    background: url('/assets/images/affected_states_icon.png') no-repeat;
+  }
+}
+.recall__report-date {
+  .icon {
+    background: url('/assets/images/report_date_icon.png') no-repeat;
+  }
+}
+.recall__classification {
+  .icon {
+    background: url('/assets/images/classification_icon.png') no-repeat;
+  }
+}
+.recall__code-info {
+  .icon {
+    background: url('/assets/images/product_code_icon.png') no-repeat;
+  }
+}
+
+.product__card {
+  padding: 10px 15px;
+  li {
+    clear: both;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  .icon {
+    background-size: contain;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
+    margin-right: 14px;
+    display: inline-block;
+    float: left;
+
+  }
 }
