@@ -48,14 +48,14 @@ angular.module('picnicApp').controller 'MainCtrl', ($scope, $http, usSpinnerServ
             terms: [ { term: food, isExact: "true" } ]
           }
         ]
-        count: field: 'report_date'
+        limit: value: -1
 
       #TODO move to a service - ideally a reports model
       queryString = JSON.stringify query
-      console.log window.btoa queryString
       $http.get("/api/food-search/?search=#{window.btoa queryString}")
         .success (reports) ->
           usSpinnerService.stop 'spinner-1'
+          console.log reports.results
           $scope.reports = reports.results
 
 #          groupedByDateData = _.groupBy adverseReactions.results, (result) ->

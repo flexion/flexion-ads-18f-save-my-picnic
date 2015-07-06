@@ -83,5 +83,10 @@ exports.getPath = function(query)
       queryString += ".exact"
     }
   }
+  if (query.search.limit) {
+    queryString += "&limit=";
+    queryString += query.search.limit.value;
+
+  }
   return queryString;
 };
