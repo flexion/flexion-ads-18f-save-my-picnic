@@ -1,0 +1,49 @@
+div(ng-include='"components/header/header.html"')
+main.main.row(role="main")
+  .col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+    form.search-form(no-validate)
+      .input-group
+        label.sr-only(for="search") Search Recalled Foods
+        input#search.search.form-control(type="text", ng-model='food')
+        .input-group-btn
+          button.btn.btn-primary(type="submit", ng-click='search(food)') Find Local Recalls
+  
+  div(ng-show='reports.length > 0').col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+    h1 Food Recall Results
+      small.update &nbsp;Database last updated &ndash; {{meta.last_updated}}
+  
+    div(ng-repeat='recall in reports | orderBy: "report_date": true')      
+      article.product__card.row
+        h2.product__title.col-xs-8 {{recall.product_description | limitTo:45 }}
+        div.btn.btn-primary.col-xs-3
+          span.glyphicon.glyphicon-plus
+          | View Recall Details
+        .product__details
+          ul
+            li.recall__details
+              span.icon
+              span.details
+                em Recall Reason: 
+                | {{recall.reason_for_recall}}
+            li.recall__states
+              span.icon
+              span.details
+                em Affected States: 
+                | {{recall.distribution_pattern}}
+            li.recall__report-date
+              span.icon
+              span.details
+                em Report Date: 
+                | {{recall.report_date}}
+            li.recall__classification
+              span.icon
+              span.details
+                em Classification: 
+                | {{recall.classification}}
+            li.recall__code-info
+              span.icon
+              span.details
+                em Product Code: 
+                | {{recall.code_info}}
+div(ng-include='"components/footer/footer.html"')
+
