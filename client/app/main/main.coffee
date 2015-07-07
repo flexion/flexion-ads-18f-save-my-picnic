@@ -7,3 +7,4 @@ angular.module 'picnicApp'
     url: '/'
     templateUrl: 'app/main/main.html'
     controller: 'MainCtrl'
+

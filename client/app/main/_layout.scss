@@ -20,10 +20,6 @@ body {
   transition: all ease-in-out .2s;
   overflow: hidden;
   clear: both;
-  &.open {
-    height: auto;
-    padding: 10px;
-  }
   ul {
     list-style-type: none;
     padding: 0;
