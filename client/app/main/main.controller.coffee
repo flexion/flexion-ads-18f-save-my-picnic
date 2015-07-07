@@ -46,3 +46,5 @@ angular.module('picnicApp')
             $scope.errorMessage = "Sorry! We didn't find any data with that query. Please revise your search and try again."
     else
       usSpinnerService.stop 'spinner-1' #nothing to search for
+
+
