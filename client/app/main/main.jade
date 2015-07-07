@@ -8,6 +8,12 @@ main.main.row(role="main")
         .input-group-btn
           button.btn.btn-primary(type="submit", ng-click='search(food)') Find Local Recalls
   
+  div(ng-show='reports.length == 0', aria-live="assertive").col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+    h2 {{ errorMessage }}
+    h3 Search for a food term like "ice cream" or "sprouts" to get started using Picnic Rescue.
+    br
+    span Hint: If you're not seeing results, please try your search again, perhaps with a more general term.
+
   div(ng-show='reports.length > 0', aria-live="assertive").col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
     h1 Food Recall Results
       small.update &nbsp;Database last updated &ndash; {{meta.last_updated}}
