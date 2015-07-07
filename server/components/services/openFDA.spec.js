@@ -22,7 +22,7 @@ describe('openFDA.getPath', function() {
   };
 
   it('should respond with a properly formatted query string', function(done) {
-    var expectedResult = '/food/enforcement.json?search=reason_for_recall:"ice+cream"&count=report_date';
+    var expectedResult = '/food/enforcement.json?api_key=1tng2lKHWL3Upt0LfvdyEsl82L5ROFYBgbfUAJHL&search=reason_for_recall:"ice+cream"&count=report_date';
     var result = openFDA.getPath(request2);
     result.should.be.instanceof(String);
     result.should.equal(expectedResult);
@@ -42,7 +42,7 @@ describe('openFDA.getPath', function() {
       limit: {value: -1}
     }
     };
-    var expectedResult = '/food/enforcement.json?search=reason_for_recall:"cheese"&limit=-1';
+    var expectedResult = '/food/enforcement.json?api_key=1tng2lKHWL3Upt0LfvdyEsl82L5ROFYBgbfUAJHL&search=reason_for_recall:"cheese"&limit=-1';
     var result = openFDA.getPath(request);
     result.should.be.instanceof(String);
     result.should.equal(expectedResult);

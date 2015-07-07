@@ -40,8 +40,8 @@ exports.getPath = function(query)
 {
   //see https://open.fda.gov/api/reference/#query-syntax
  var field, j, len1, queryString, ref, ref1, term;
-
-  queryString = '/food/enforcement.json?search=';
+  //TODO read api key from environment variable
+  queryString = '/food/enforcement.json?api_key=1tng2lKHWL3Upt0LfvdyEsl82L5ROFYBgbfUAJHL&search=';
   ref = query.search.fields;
   for (var i = 0, len = ref.length; i < len; i++) {
     field = ref[i];
