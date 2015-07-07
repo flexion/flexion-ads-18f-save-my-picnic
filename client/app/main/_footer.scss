@@ -1,0 +1,12 @@
+.footer {
+  background: $secondaryPastel;
+  padding: 1em 0;
+  text-align: center;
+  a, a:visited {
+    color: $primary;
+  }
+  a:focus, a:hover {
+    color: $accentTwoShade;
+    text-decoration: underline;
+  }
+}
