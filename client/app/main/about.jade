@@ -1,49 +1,18 @@
 div(ng-include='"components/header/header.html"')
 main.main.row(role="main")
-  .col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-    form.search-form(no-validate)
-      .input-group
-        label.sr-only(for="search") Search Recalled Foods
-        input#search.search.form-control(type="text", ng-model='food')
-        .input-group-btn
-          button.btn.btn-primary(type="submit", ng-click='search(food)') Find Local Recalls
-  
-  div(ng-show='reports.length > 0').col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-    h1 Food Recall Results
-      small.update &nbsp;Database last updated &ndash; {{meta.last_updated}}
-  
-    div(ng-repeat='recall in reports | orderBy: "report_date": true')      
-      article.product__card.row
-        h2.product__title.col-xs-8 {{recall.product_description | limitTo:45 }}
-        div.btn.btn-primary.col-xs-3
-          span.glyphicon.glyphicon-plus
-          | View Recall Details
-        .product__details
-          ul
-            li.recall__details
-              span.icon
-              span.details
-                em Recall Reason: 
-                | {{recall.reason_for_recall}}
-            li.recall__states
-              span.icon
-              span.details
-                em Affected States: 
-                | {{recall.distribution_pattern}}
-            li.recall__report-date
-              span.icon
-              span.details
-                em Report Date: 
-                | {{recall.report_date}}
-            li.recall__classification
-              span.icon
-              span.details
-                em Classification: 
-                | {{recall.classification}}
-            li.recall__code-info
-              span.icon
-              span.details
-                em Product Code: 
-                | {{recall.code_info}}
-div(ng-include='"components/footer/footer.html"')
 
+  div.col-sm-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+    h2 Picnic Rescue Search Tool
+    p Foodborne illnesses are caused by bacteria, viruses, parasites, toxins, or other substance contamination. 
+    p Certain groups of people are more susceptible to foodborne illnesses, especially children under five, older adults, pregnant women, and people with diabetes, autoimmune diseases, HIV/AIDS or cancer. These high risk individuals are both more likely to get sick from contaminated food, and more likely to be seriously impacted by contaminated food.
+    p If you, or someone you love falls into one of these groups, there are of lots of recommendations for safe meal prep and serving steps you can take to decrease the likelihood of illness. But becoming a smarter shopper is also imperative. Enter Picnic Rescue.
+    p Picnic Rescue is a simple search tool that allows you to search the FDA's Food Enforcement database by food type, to ensure that a recalled item doesn't make it into your shopping cart or picnic basket. You, too, can become a picnic hero by avoiding recalled products that might be on your shopping list&mdash;or already in your pantry&mdash;destined for your next family gathering.
+    h2 Flexion
+    p Flexion (<a href="http://flexion.us">flexion.us</a>) is an enterprise IT advising, staffing and digital solutions company serving up lean and agile solutions. We help organizations get ahead and stay ahead by implementing smart business strategies, new cloud-based technologies and smart user-focused  strategies that are affordable, measurable and successful.
+    h2 More About Food Safety
+    ul
+      li <a href="http://www.foodsafety.gov/keep/index.html">http://www.foodsafety.gov/keep/index.html</a>
+      li <a href="http://www.foodsafety.gov/poisoning/index.html">http://www.foodsafety.gov/poisoning/index.html</a>
+      li <a href="http://www.foodsafety.gov/keep/government/index.html">http://www.foodsafety.gov/keep/government/index.html</a>
+
+div(ng-include='"components/footer/footer.html"')
