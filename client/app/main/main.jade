@@ -14,7 +14,7 @@ main.main.row(role="main")
   
     div(ng-repeat='recall in reports | orderBy: "report_date": true')      
       article.product__card.row
-        h2.product__title.col-xs-8 {{recall.product_description | limitTo:45 }}
+        h2.product__title.col-xs-8 {{recall.product_description | truncate:45 }}
         button.btn.btn-primary.col-xs-3(ng-click="isCollapsed = !isCollapsed")
           span.glyphicon.glyphicon-plus
           | View Recall Details
