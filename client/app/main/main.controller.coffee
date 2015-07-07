@@ -6,6 +6,16 @@ angular.module('picnicApp')
     return unless input?
     date = new Date input.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')
     $filter('date')(date, 'MM/dd/yyyy')
+.filter 'truncate', ->
+  (text, length, end) ->
+    if isNaN(length)
+      length = 10
+    if end == undefined
+      end = '...'
+    if text.length <= length or text.length - (end.length) <= length
+      text
+    else
+      String(text).substring(0, length - (end.length)) + end
 .controller 'MainCtrl', ($scope, $http, usSpinnerService) ->
   $scope.reports = []
 
